@@ -22,7 +22,7 @@
             </h1>
         </header>
         <date class="post-meta meta-date">
-            {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
+            {{ .Date.Year }}/{{ printf "%d" .Date.Month }}/{{ .Date.Day }}
         </date>
         {{ with .Params.Categories }}
         <div class="post-meta meta-category">
@@ -34,7 +34,7 @@
         {{ end }}
         <div class="post-content">
             {{ .Summary }}……
-            <p class="readmore"><a href="{{ .Permalink }}">阅读全文</a></p>
+            <p class="readmore"><a href="{{ .Permalink }}">Read Content</a></p>
         </div>
     </article>
     {{ end }}

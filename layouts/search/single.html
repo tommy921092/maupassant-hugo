@@ -1,15 +1,14 @@
 {{ define "content"}}
 <div class="res-cons">
     <h3 class="archive-title">
-        搜索
+        Result For
         <span class="keyword">哈哈</span>
-        的结果
     </h3>
 
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="链接">标题</a>
+                <a href="链接">Title</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -17,7 +16,7 @@
         </date>
         <div class="post-content">
             概要……
-            <p class="readmore"><a href="链接">阅读全文</a></p>
+            <p class="readmore"><a href="链接">Read Content</a></p>
         </div>
     </article>
 
@@ -55,8 +54,8 @@
                         var url = item.find("link").text();
                         var searchItem = `<article class="post"><header><h1 class="post-title"><a href="` + url + `">` + title + `</a></h1></header>`;
                         var pubDate = new Date(item.find("pubDate").text())
-                        searchItem += `<date class="post-meta meta-date">` + pubDate.getFullYear() + `年` + (pubDate.getMonth() + 1) + `月` + pubDate.getDate() + `日</date>`;
-                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `">阅读全文</a></p></div></article>`;
+                        searchItem += `<date class="post-meta meta-date">` + pubDate.getFullYear() + `/` + (pubDate.getMonth() + 1) + `/` + pubDate.getDate() + `</date>`;
+                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `">Read Content</a></p></div></article>`;
 
                         $("div.res-cons").append(searchItem);
                     }
